@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+
+
+/*スマホ用メニューを表示させない*/
+#menubar-s {
+    display: none;
+}
+
+/*３本バーアイコンを表示させない*/
+#menubar_hdr {
+    display: none;
+}
+
+
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px) {
+    /*上メニューを非表示にする*/
+
+    .sns_icon02 {
+        display: none;
+    }
+
+    #menubar {
+        display: none;
+    }
+
+
+    /*共通
+---------------------------------------------------------------------------*/
+    .menubar .keyvisual .greeting .ibent_info .media_info footer {
+        width: auto;
+    }
+
+    /*メインメニュー
+---------------------------------------------------------------------------*/
+    /*スマホ用メニューを非表示から表示に切り替える*/
+    #menubar-s {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*メニュー１個あたりの設定*/
+    #menubar-s li {
+
+        margin: 30px 0;
+    }
+
+    #menubar-s li a {
+        display: flex;
+        text-decoration: none;
+        border-bottom: 1px solid #707070;
+        max-width: 650px;
+        font-size: 16px;
+    }
+
+
+    #menubar-s li:nth-child(even) a {
+        border-right: none;
+    }
+
+    /*PC用メニューを非表示にする*/
+    #menubar {
+        display: none;
+    }
+
+
+
+
+    /*３本バーアイコン設定
+---------------------------------------------------------------------------*/
+    /*３本バーブロック*/
+    #menubar_hdr {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 2%;
+        width: 30px;
+        border: 1px solid #000;
+
+        padding: 12px 10px 5px;
+        /*余白*/
+        background: #F9F9F9;
+    }
+
+    /*３本のバー（1本あたり）*/
+    #menubar_hdr span {
+        display: block;
+        border-top: 3px solid #000;
+        /*枠線の幅、線種、色*/
+        margin-bottom: 7px;
+    }
+
+    form {
+        max-width: 800px;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+    }
+}
